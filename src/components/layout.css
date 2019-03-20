@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #3490dc;
+}
+
+a:hover {
+	color: #1c3d5a;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+p {
+	margin: 1.5rem 0;
+}
+
+code {
+	background: rgb(240, 240, 240);
+    padding: 4px 8px;
+    margin: 0 5px;
+}
+
+article ul li {
+	padding-left: 2rem;
+}
+
+article ul li::before {
+	content: "\2022";
+	color: #3490dc;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
