@@ -1,9 +1,7 @@
 
 import React from "react"
-import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { BackgroundImage } from '../content'
-import Truncate from 'react-truncate'
 
 const PostSummary = ({ post }) => (
 	<Link
@@ -26,9 +24,7 @@ const PostSummary = ({ post }) => (
 				{post.frontmatter.title}
 			</h2>
 			<p css={tw`text-grey-dark text-base`}>
-				<Truncate lines={4}>
 					{post.frontmatter.description}
-				</Truncate>
 			</p>
 		</div>
 	</Link>

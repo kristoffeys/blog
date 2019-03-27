@@ -6,6 +6,7 @@ description: >-
   I've been working on improving a legacy application that was built in Zend Framework 1. In order to improve the overall structure of the code, and to be able to factor out Zend_Registry and other static methods we wanted to add a DIC (Dependency Injection Container).
 tags:
   - PHP
+  - Zend Framework
 image: /img/injection.jpg
 ---
 
