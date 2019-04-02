@@ -8,7 +8,7 @@ const Footer = () => (
 	<footer css={tw`border-grey-light border-solid border-b-0 border-l-0 border-r-0 border-t mb-8 mt-10 pt-5 text-sm`}>
 		<div css={tw`md:flex md:justify-between`}>
 			<div>© Kristof Feys</div>
-			<div>Built with <a href="https://www.gatsbyjs.org">Gatsby</a>, <a href="https://strapi.io/">Strapi</a> and <a href="https://tailwindcss.com/">Tailwind</a></div>
+			<div>Built with <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://tailwindcss.com/">Tailwind</a>, hosted on <a href="https://www.netlify.com/">Netlify</a></div>
 		</div>
 
 	</footer>

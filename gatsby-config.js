@@ -57,6 +57,18 @@ module.exports = {
               destinationDir: 'static',
             },
           },
+          {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+              name: "Kristof Feys",
+              short_name: "Kristof Feys",
+              start_url: "/",
+              background_color: "#3490dc",
+              theme_color: "#3490dc",
+              display: "browser",
+              icon: "src/images/android-chrome-512x512.png"
+            },
+          },
         ],
       },
     },
