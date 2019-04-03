@@ -2,10 +2,13 @@
 templateKey: blog-post
 title: Removing and adding objects to the CollectionType in Sonata
 date: 2019-01-20T19:04:10.000Z
+description:  >-
+  When working with a project in Sonata, I came across an issue where adding and removing objects from the CollectionType field within an admin block just didn't work. Here's what I did to get this to work.
 tags:
   - PHP
   - Symfony
   - Sonata
+image: /img/collection.jpg
 ---
 Recently I've worked on an application written with the [Sonata bundle](https://sonata-project.org/) for [Symfony](https://symfony.com/). Within this application I needed to make use of the [CollectionType](https://sonata-project.org/bundles/admin/3-x/doc/reference/form_types.html#sonataformtypecollectiontype) within an [admin class](https://sonata-project.org/bundles/admin/3-x/doc/getting_started/creating_an_admin.html). I also needed to be able to add and remove objects to this collection. This is where i encountered an issue. Adding or removing objects didn't work. When trying to remove objects, this did work but the orphaned object remained in the database. When adding an object,
 I got the error `A new entity was found through the relationship`.
