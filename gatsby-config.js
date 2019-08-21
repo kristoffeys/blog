@@ -7,13 +7,19 @@ module.exports = {
     author: `Kristof Feys`,
   },
   plugins: [
-		`gatsby-plugin-react-helmet`,
-		{
+    `gatsby-plugin-react-helmet`,
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
         name: 'uploads',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-37713905-4",
       },
     },
     {
