@@ -15,7 +15,7 @@ Recently I encountered a bug in an open-source library I was using in a project.
 Since the bug was breaking for us, we needed the fix asap. In order to be able to use our fix, we looked for a way to override dependencies in [Composer](https://getcomposer.org/). We ended up following this scenario:
 
 - Fork the repository of the library
-- commpit and publish the bugfix in a branch of our fork
+- commit and publish the bugfix in a branch of our fork
 - Submit a pull request
 - Override dependency with our version in [Composer](https://getcomposer.org/).
 
