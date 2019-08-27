@@ -12,7 +12,7 @@ image: /img/composer.jpg
 
 Recently I encountered a bug in an open-source library I was using in a project. Like a good citizen, I fixed the bug and submitted a pull request. However it takes some time until the pull request is actually merged and available in a release of this library.
 
-Since the bug was braking for us, we needed the fix asap. In order to be able to use our fix, we looked for a way to override dependencies in [Composer](https://getcomposer.org/). We ended up following this scenario:
+Since the bug was breaking for us, we needed the fix asap. In order to be able to use our fix, we looked for a way to override dependencies in [Composer](https://getcomposer.org/). We ended up following this scenario:
 
 - Fork the repository of the library
 - commpit and publish the bugfix in a branch of our fork
