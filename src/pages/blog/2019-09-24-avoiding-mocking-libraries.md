@@ -13,10 +13,12 @@ While working on a project, I struggled with mocks in a way that they weren't re
 
 A simple example of a mock I had was one for a geolocator class:
 ```php
+
 $geolocator = $this->createMock(Geolocator::class);
 $geolocator
     ->method('geolocate')
     ->willReturn(Geolocation::fromLatLng(0, 0));
+
 ```
 
 As you can see in the above example. We're mocking a `geolocate` method that returns a `Geolocation` Object from a certain latitude and longitude (in this example, both 0).
@@ -24,12 +26,14 @@ As you can see in the above example. We're mocking a `geolocate` method that ret
 When using the strategy explained in the article, no mock library is used. Instead we're using an anonymous class to achieve the same result.
 
 ```php
+
 $geolocator = new class extends Geolocator {
     public function __construct() {}
     public function geolocate(Address $address): Geolocation {
         return Geolocation::fromLatLng(0, 0);
     }
 };
+
 ```
 
 As you can see, this code is only slightly longer, but to me it's a lot more comprehensive. All we had to do was create an anonymous class that extends the class we want to mock. Override the constructor (in case some dependencies are defined via the original constructor). And override the method in which we want to define the returned value.

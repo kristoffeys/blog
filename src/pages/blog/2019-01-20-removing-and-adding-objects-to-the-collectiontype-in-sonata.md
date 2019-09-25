@@ -19,6 +19,7 @@ When browsing through the internet, I found the following solutions:
 In order to be able to add new objects (`Slide`), you need to set `cascade={"persist"}` on your relationship within your entity (`Slider`):
 
 ```php
+
 /**
 * @var \Doctrine\Common\Collections\ArrayCollection
 * @ORM\OneToMany(
@@ -30,11 +31,13 @@ In order to be able to add new objects (`Slide`), you need to set `cascade={"per
 * @ORM\OrderBy({"order" = "ASC"})
 */
 private $slides;
+
 ```
 
 In order to remove orphaned objects (`Slide`), you should set the `orphanRemoval=true`option within your entity (`Slider`):
 
 ```php
+
 /**
 * @var \Doctrine\Common\Collections\ArrayCollection
 * @ORM\OneToMany(
@@ -47,11 +50,13 @@ In order to remove orphaned objects (`Slide`), you should set the `orphanRemoval
 * @ORM\OrderBy({"order" = "ASC"})
 */
 private $slides;
+
 ```
 
 For me both solutions didn't work. What I eventually did to solve the issue was within my Admin Class (`sliderAdmin`), adding the following code:
 
 ```php
+
 public function prePersist($slider)
 {
   $this->preUpdate($slider);
@@ -76,6 +81,7 @@ public function preUpdate($slider)
     }
   }
 }
+
 ```
 
 First of all it does the same actions before persisting and before updating the entity (`Slider`). We loop through the submitted object (`Slider`)) it's children (`Slide`) and check if the id is null. If the id is null, we know that this is a new child (`Slide`) within the relationship and we create it.
@@ -86,8 +92,10 @@ When looping through the slides in the form, we retrieve the data (entity) for t
 The above is possible because in our `removeSlide` function in our entity `Slider`, we remove the reference to the slider:
 
 ```php
+
 public function removeSlide(Slide $slide) {
   $slide->setSlider(null);
   $this->slides->removeElement($slide);
 }
+
 ```

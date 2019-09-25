@@ -21,7 +21,8 @@ Since the bug was breaking for us, we needed the fix asap. In order to be able t
 
 Since in our case, other libraries were also depending on this specific library (and they required a stable version), we needed to create an alias for our branch so that the other libraries were 'tricked' into thinking that we were providing a stable version of the library:
 
-``` json
+```json
+
 {
     "require": {
         "vendor/brokenLibrary": "dev-OurFixBranch as 3.0.0"
@@ -33,6 +34,7 @@ Since in our case, other libraries were also depending on this specific library 
         }
     ]
 }
+
 ```
 
 Our custom Branch "OurFixBranch" will override version 3.0.0 of the "brokenLibrary" which is compatible with our other libraries. Once the fix is released in an official version, we can remove this code & require the fixed version.

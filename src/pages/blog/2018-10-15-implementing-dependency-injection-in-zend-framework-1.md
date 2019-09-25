@@ -16,7 +16,8 @@ We opted to use the [container from ThePHPLeague](https://github.com/thephpleagu
 
 We started by creating an interface 'Injectable' that controllers could use in order to show that these controllers are depending on certain classes.
 
-``` php
+```php
+
 interface Injectable
 {
     /**
@@ -26,11 +27,13 @@ interface Injectable
      */
     public function getDependencies(): array;
 }
+
 ```
 
 Once this is done we can implement the interface in the controllers, and use the function:
 
-``` php
+```php
+
 /** @var \Psr\Log\LoggerInterface */
 public $logger;
 
@@ -38,6 +41,7 @@ public function getDependencies(): array
 {
     return ['logger' => LoggerInterface::class];
 }
+
 ```
 
 This will inject the LoggerInterface service in the logger variable. Once we're done, we can use the logger in the controller by simply calling `$this->logger->log("Hello World");`
@@ -45,7 +49,8 @@ This will inject the LoggerInterface service in the logger variable. Once we're 
 Now that our controllers are ready to accept dependencies, we need to define them.
 In order to make the container available in our application we need to initialize it in our `bootstrap.php` file. This can be done by adding the following function to our bootstrap file:
 
-``` php
+```php
+
 protected function _initContainer()
 {
     $aggregate = new \League\Container\Definition\DefinitionAggregate(include APPLICATION_PATH . '/configs/services.php');
@@ -53,11 +58,13 @@ protected function _initContainer()
     $container->delegate(new League\Container\ReflectionContainer);
     return $container;
 }
+
 ```
 
 Note that We chose to define our services in a seperate config file which returns an array of all the functions. Underneath you'll find an example of our `services.php` file:
 
-``` php
+```php
+
 use League\Container\Definition\Definition;
 use Psr\Log\LoggerInterface;
 use Monolog\Logger;
@@ -65,11 +72,13 @@ use Monolog\Logger;
 return [
     (new Definition(LoggerInterface::class, Logger::class))->setShared(),
 ];
+
 ```
 
 Now that we've set up our services. We should make them available to the container. First we'll create an action helper that makes our dependencies available in the controllers:
 
-``` php
+```php
+
 use League\Container\Container;
 
 class DependencyInjector extends \Zend_Controller_Action_Helper_Abstract
@@ -98,13 +107,15 @@ class DependencyInjector extends \Zend_Controller_Action_Helper_Abstract
         }
     }
 }
+
 ```
 
 This code simply checks if our controller implements the `Injectable` interface and if the container is available, it'll check the `getDependencies` function, and loop through the array. It then will fill the controllers property with the service that is defined in our container.
 
 Now all we need to do, to make all of this functional, is initialize the action helper by adding the following code to our bootstrap class:
 
-``` php
+```php
+
 protected function _initDependencyInjector()
 {
     $this->bootstrap('container');
@@ -113,6 +124,7 @@ protected function _initDependencyInjector()
         new DependencyInjector()
     );
 }
+
 ```
 
 Boom! We're done.
