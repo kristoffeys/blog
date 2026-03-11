@@ -17,7 +17,8 @@ There's something every experienced engineer knows but rarely says out loud: **c
 
 Every year, the tech industry produces a new batch of tools that promise to revolutionize how we build software. Rust will eliminate all memory bugs. WebAssembly will replace JavaScript. Kubernetes will solve deployment forever. AI will replace all developers.
 
-The pattern is predictable. A new technology emerges, early adopters write blog posts, conference talks multiply, ... Six months later, the same early adopters start writing "lessons learned" posts about the hidden costs they didn't anticipate.
+The pattern is predictable. A new technology emerges, early adopters write blog posts, conference talks multiply, ... 
+Six months later, the same early adopters start writing "lessons learned" posts about the hidden costs they didn't anticipate.
 
 I've watched this cycle repeat for over a decade. And the companies that consistently ship products and grow are rarely the ones chasing the latest trend. They're the ones making deliberate, boring choices.
 
