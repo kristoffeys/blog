@@ -41,8 +41,49 @@ pre > code {
   margin: 0;
 }
 
+/* Headings in blog posts */
+article h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1c3d5a;
+  margin: 2.5rem 0 1rem;
+  line-height: 1.3;
+}
+
+article h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #1c3d5a;
+  margin: 2rem 0 0.75rem;
+  line-height: 1.4;
+}
+
+article h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1c3d5a;
+  margin: 1.5rem 0 0.5rem;
+  line-height: 1.4;
+}
+
+article h5,
+article h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1c3d5a;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Lists */
+article ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
 article ul li {
   padding-left: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 article ul li::before {
@@ -52,4 +93,85 @@ article ul li::before {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+article ol {
+  list-style-type: decimal;
+  padding-left: 2rem;
+  margin: 1.5rem 0;
+}
+
+article ol li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+article ol li::marker {
+  color: #3490dc;
+  font-weight: 600;
+}
+
+/* Blockquotes */
+article blockquote {
+  border-left: 4px solid #3490dc;
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.5rem;
+  color: #4a5568;
+  background: #f7fafc;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+article blockquote p {
+  margin: 0.75rem 0;
+}
+
+/* Horizontal rules */
+article hr {
+  border: none;
+  border-top: 2px solid #e2e8f0;
+  margin: 2.5rem 0;
+}
+
+/* Tables */
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+article th {
+  background: #f7fafc;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+article td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Images */
+article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Strong and emphasis */
+article strong {
+  font-weight: 700;
+}
+
+article em {
+  font-style: italic;
+}
+
+/* Pre/code blocks */
+article pre {
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  overflow-x: auto;
 }
