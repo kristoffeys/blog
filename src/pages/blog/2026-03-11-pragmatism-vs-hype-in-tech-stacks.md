@@ -25,7 +25,7 @@ I've watched this cycle repeat for over a decade. And the companies that consist
 
 Most companies aren't building operating systems. They're building CRUD applications, dashboards, APIs, and e-commerce platforms. For these use cases, the advantages of some shiny new language or framework are dwarfed by practical concerns:
 
-**Hiring.** Try hiring five developers knowing this new technology in a mid-sized European city. Now try hiring five PHP or JavaScript developers. The difference in timeline, cost, and candidate pool is enormous. A technology is only as good as the team you can build around it.
+**Hiring.** Try hiring five developers knowing this new technology. Now try hiring five PHP or JavaScript developers. The difference is enormous. A technology is only as good as the team you can build around it.
 
 **Ecosystem maturity.** Need an OAuth library? A PDF generator? A payment gateway integration? In PHP or JavaScript, you'll find battle-tested options with years of production use. In newer ecosystems, you'll find promising libraries with breaking changes every other release.
 
