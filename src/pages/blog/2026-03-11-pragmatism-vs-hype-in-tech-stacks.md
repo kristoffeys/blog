@@ -11,14 +11,13 @@ tags:
 image: /img/pragmatism.jpg
 ---
 
-There's something every experienced engineer knows but rarely says out loud: **choosing a technology is not primarily a technical decision. It's a business decision.**
+**Choosing a technology is not primarily a technical decision. It's a business decision.** Most engineers know this. Few say it when it matters.
 
 ## The Shiny New Toy Syndrome
 
 Every year, the tech industry produces a new batch of tools that promise to revolutionize how we build software. Rust will eliminate all memory bugs. WebAssembly will replace JavaScript. Kubernetes will solve deployment forever. AI will replace all developers.
 
-The pattern is predictable. A new technology emerges, early adopters write blog posts, conference talks multiply, ... 
-Six months later, the same early adopters start writing "lessons learned" posts about the hidden costs they didn't anticipate.
+The pattern is predictable. A new technology emerges, early adopters write blog posts, conference talks multiply, The hype builds. Six months later, the same early adopters start writing "lessons learned" posts about the hidden costs they didn't anticipate.
 
 I've watched this cycle repeat for over a decade. And the companies that consistently ship products and grow are rarely the ones chasing the latest trend. They're the ones making deliberate, boring choices.
 
@@ -32,11 +31,15 @@ Most companies aren't building operating systems. They're building CRUD applicat
 
 **Maintenance.** Code is read far more often than it's written. When a developer leaves and someone else inherits their web service using a shiny new niche language or framework, the maintenance burden is categorically different from inheriting a 'regular' application. The pool of developers who can confidently maintain the code determines your long-term cost of ownership.
 
-**AI tooling.** Here's one that's easy to overlook: AI coding assistants like Copilot and Claude are dramatically better at generating and understanding code in mainstream languages. The training data for PHP, Python, and JavaScript dwarfs that of niche languages. So choosing boring tech also means your AI tools are more effective. Your team gets a bigger productivity multiplier from AI when working in well-documented, widely-used technologies.
+## The AI Multiplier
+
+Here's an angle that's easy to overlook in this conversation: AI coding assistants are dramatically better at mainstream technologies. The training data for PHP, Python, and JavaScript dwarfs that of niche or emerging languages. When you choose boring tech, your AI tools become more effective. You get better completions, more accurate suggestions, and faster debugging. Every developer on your team gets a larger productivity multiplier.
+
+In other words, the boring choice compounds. It was already cheaper to hire for, easier to maintain, and better supported by the ecosystem. Now it's also the choice that gets the most out of AI tooling. The gap between mainstream and niche is widening, not closing.
 
 ## Boring Technology Pays the Bills
 
-[Dan McKinley's "Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) talk has a very important point on this subject. His core argument: every company has a limited number of "innovation tokens," and you should spend them on things that directly differentiate your business.
+[Dan McKinley's "Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) makes this concrete with a useful mental model: every company has a limited number of "innovation tokens," and you should spend them on things that actually differentiate your business. Not on your choice of programming language.
 
 If you're building a SaaS product, your competitive advantage is not your programming language. It's your domain expertise, your user experience, your go-to-market strategy. The tech stack is a means to an end.
 
@@ -48,7 +51,7 @@ I'm not arguing that you should never adopt new technologies. I'm arguing that y
 
 Legitimate reasons to adopt a newer technology:
 
-- **Your problem genuinely requires it.** If you're writing a game engine, a browser, or a high-frequency trading system, You might need performance characteristics (from e.g. Rust) that are non-negotiable.
+- **Your problem genuinely requires it.** If you're writing a game engine, a browser, or a high-frequency trading system, You might need performance characteristics that Rust, for example, can provide. And no amount of optimization will get you otherwise.
 - **You've exhausted the capabilities of your current stack.** If your Python service genuinely can't handle the throughput you need after proper optimization, it might be time to rewrite the hot path.
 - **The ecosystem has matured enough.** There's a world of difference between adopting React in 2015 (risky but reasonable) and adopting it in 2020 (established and well-supported).
 
