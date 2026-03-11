@@ -43,7 +43,7 @@ In other words, the boring choice compounds. It was already cheaper to hire for,
 
 If you're building a SaaS product, your competitive advantage is not your programming language. It's your domain expertise, your user experience, your go-to-market strategy. The tech stack is a means to an end.
 
-PHP powers a shocking percentage of the internet — WordPress alone accounts for over 40% of all websites. Python runs the backends of companies from Instagram to Stripe. Java, despite being the punchline of countless jokes, runs the financial infrastructure of the world. These technologies aren't popular because engineers are ignorant. They're popular because they work, they're well-understood, and they have massive communities that produce solutions to virtually every problem you'll encounter.
+PHP powers a shocking percentage of the internet . WordPress alone accounts for over 40% of all websites. Python runs the backends of companies from Instagram to Stripe. Java, despite being the punchline of countless jokes, runs the financial infrastructure of the world. These technologies aren't popular because engineers are ignorant. They're popular because they work, they're well-understood, and they have massive communities that produce solutions to virtually every problem you'll encounter.
 
 ## When Does New Technology Make Sense?
 
