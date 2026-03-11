@@ -1,5 +1,1 @@
-import CMS from 'netlify-cms'
-
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+// CMS integration removed — was Netlify CMS, no longer in use

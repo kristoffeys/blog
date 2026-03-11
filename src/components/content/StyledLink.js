@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-export const StyledLink = styled(Link)`
- ${tw`text-primary`};
-`
+export const StyledLink = ({ to, children, ...props }) => (
+  <Link to={to} className="text-primary" {...props}>{children}</Link>
+)
