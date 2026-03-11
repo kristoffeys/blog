@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
-title: "Rust, WebAssembly, and the Hype Cycle: What SMBs Actually Need to Scale"
+title: "Choose boring technology: Why pragmatism beats hype in your tech stack"
 date: 2026-03-11T10:00:00.000Z
 description: >-
-  For most mid-sized companies, boring technologies like PHP, JavaScript, and Python are more profitable than cutting-edge ones. Here's why pragmatism beats hype when choosing your tech stack.
+  For most mid-sized companies, boring technologies like PHP, JavaScript, and Python are more profitable than cutting-edge ones and in the age of AI, even more so. Stop chasing shiny new tools and start shipping.
 tags:
   - engineering
   - architecture
