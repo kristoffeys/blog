@@ -23,8 +23,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: npm
 
-      - run: npm install
+      - run: npm ci
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            public
+            .cache
+          key: gatsby-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('gatsby-config.js') }}-${{ hashFiles('src/**', 'static/**') }}
+          restore-keys: |
+            gatsby-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('gatsby-config.js') }}-
+            gatsby-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
+            gatsby-${{ runner.os }}-
 
       - run: npm run build
         env:
