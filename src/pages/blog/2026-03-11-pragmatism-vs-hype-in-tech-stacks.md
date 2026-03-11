@@ -36,7 +36,7 @@ Most companies aren't building operating systems. They're building CRUD applicat
 
 ## Boring Technology Pays the Bills
 
-[Dan McKinley's "Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) talk remains one of the most important pieces of engineering wisdom ever published. His core argument: every company has a limited number of "innovation tokens," and you should spend them on things that directly differentiate your business.
+[Dan McKinley's "Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) talk has a very important point on this subject. His core argument: every company has a limited number of "innovation tokens," and you should spend them on things that directly differentiate your business.
 
 If you're building a SaaS product, your competitive advantage is not your programming language. It's your domain expertise, your user experience, your go-to-market strategy. The tech stack is a means to an end.
 
